@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Mode</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script type="module" src="js/admin.js"></script>
+
+</head>
+
+<body> 
+
+  <div id="header">
+    <h3 id="title" class="display-4">Admin Mode</h3>
+    <div id="description-container">
+      <div class="jumbotron bg-dark text-white">
+        <p class="lead">Add, delete, or modify quiz questions.</p>
+        <hr class="my-4">
+        <p>The <i class="green">Add</i> button will add the question to the database, and add a new question template to
+          the page.</p>
+        <p>The <i class="blue">Update</i> button is enabled once the question has been added, and will update the
+          question stored in the database.</p>
+        <p>The <i class="red">Delete</i> button is enabled once the question has been added, and will delete the
+          question from the database.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="question-template">
+    <div class="card bg-light mb-3 question">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <div class="card-text">
+
+          <textarea class="form-control question-input" name="question" rows="5" autofocus></textarea>
+
+          <div id="options-container" class="answers-container">
+            <div id="option-input" class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <div class="radio">
+                    <input class="radio-values" type="radio" name="optradio" value="0">
+                  </div>
+                </div>
+              </div>
+              <input type="text" class="form-control options" aria-label="Text input with checkbox">
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <div class="radio">
+                    <input class="radio-values" type="radio" name="optradio" value="1">
+                  </div>
+                </div>
+              </div>
+              <input type="text" class="form-control options" aria-label="Text input with checkbox">
+            </div>
+
+          </div>
+        </div>
+
+        <button class="btn btn-success btn-add-option">+</button>
+        <button class="btn btn-danger btn-delete-option">-</button>
+        <button class="btn btn-danger btn-delete" disabled>Delete</button>
+        <button class="btn btn-info btn-update" disabled>Update</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="questions-container"></div>
+
+  <div id="added-snackbar" class="snackbar">Question Added.</div>
+  <div id="updated-snackbar" class="snackbar">Question Updated.</div>
+  <div id="deleted-snackbar" class="snackbar">Question Deleted.</div>
+  <div id="loading-snackbar" class="snackbar">Loading...</div>
+
+  <div class="button-container">
+    <button type="button" id="add-btn" class="btn btn-success">Add</button>
+  </div>
+
+  <hr />
+
+  <a href="index.html" class="btn btn-info btn-lg btn-back" role="button">Back</a>
+
+</body>
+
+</html>

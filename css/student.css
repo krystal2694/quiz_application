@@ -1,0 +1,47 @@
+.button-container {
+    position: relative;
+    margin-bottom: 2rem;
+ }
+
+ #questions-container {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.card {
+    min-width: 60%;
+    text-align: left;
+    padding: 1rem;
+
+}
+
+.form-check {
+    display: none;
+}
+
+.question-text {
+    white-space: pre-wrap;
+    font-weight: 600;
+}
+
+#question-template {
+    display: none;
+}
+
+#submit-quiz-btn {
+    margin-top: 1rem;
+    display: none;
+}
+
+#user-mark-container {
+    display: none;
+}
+
+hr {
+    margin: 2rem 0 1.5rem 0;
+}
+
+.answer {
+    margin-left: 0.5rem;
+}
+
